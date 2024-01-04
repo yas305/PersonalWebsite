@@ -1,0 +1,82 @@
+.work-experience-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .experience-card {
+    background-color: #ffffff; /* Replace with the desired background color */
+    border-left: 5px solid #5b6cef; /* Replace with accent color */
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 700px; /* Adjust as necessary */
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Needed for absolute positioning of the Matter.js scene */
+    overflow: hidden;
+  }
+  
+  .experience-card h3 {
+    margin-top: 0;
+    color: #333333; /* Replace with the desired text color */
+    font-size: 1.25rem;
+  }
+  
+  .experience-card p {
+    color: #555555; /* Replace with the desired text color */
+    line-height: 1.6;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-duration {
+    font-style: italic;
+    color: #777777; /* Replace with the desired text color */
+    margin-bottom: 10px;
+  }
+
+  .tech-logos {
+    display: none; /* Initially hidden */
+    position: absolute; /* Overlay the logos on the card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px; /* Match your card border-radius */
+  }
+  
+  .experience-card:hover .tech-logos {
+    display: flex; /* Show on hover */
+  }
+  .tech-logos canvas {
+    background-color: rgb(255, 255, 255) !important;
+    display: none;
+  }
+
+  .tech-logos {
+    /* ... other styles ... */
+    overflow: hidden; /* Ensure the canvas doesn't overflow */
+    position: relative; /* Adjust if necessary to position the canvas */
+    height: 100%; /* Ensure it covers the card area */
+    width: 100%; /* Ensure it covers the card area */
+  }
+
+  .matter-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Match the width of the card */
+    height: 100%; /* Match the height of the card */
+    pointer-events: none; /* Allows clicks to pass through to the card */
+  }
+  
