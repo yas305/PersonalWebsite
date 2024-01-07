@@ -2,9 +2,9 @@ name: Heroku Deployments
 
 on:
   push:
-    branches: [ main, dev ]  # Runs on push to main and dev branches
+    branches: [ main ]  # Runs on push to main and dev branches
   pull_request:
-    branches: [ main, dev ]
+    branches: [ main]
 
 jobs:
   build:
