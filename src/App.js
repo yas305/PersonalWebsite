@@ -30,10 +30,10 @@ function App() {
         <h1>Tech I have used</h1>    
             <Physics />
       </section>
-      <section id="contact">
+      {/* <section id="contact">
         <h1>Contact Me</h1>
         <ContactForm />
-      </section>
+      </section> */}
     </div>
   );
 }

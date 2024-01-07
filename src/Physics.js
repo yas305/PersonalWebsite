@@ -54,7 +54,7 @@ function Physics() {
             width: 800,
             height: 600,
             wireframes: false,
-            hasBounds: true,
+            hasBounds: true
           }
         });
 
