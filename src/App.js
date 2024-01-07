@@ -5,6 +5,7 @@ import Terminal from './Terminal';
 import AboutMe from './AboutMe';
 import Physics from './Physics';
 import WorkExperience from './WorkExperience';
+import Footer from './Footer'; 
 
 
 function App() {
@@ -33,7 +34,12 @@ function App() {
         <h1>Contact Me</h1>
         <ContactForm />
       </section> */}
+      <Footer />
     </div>
+
+    
+    
+
   );
 }
 

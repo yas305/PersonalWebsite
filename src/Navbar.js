@@ -11,6 +11,7 @@ function Navbar() {
         <a href="#work-experience">Work Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact-me">Contact Me</a>
+        
       </div>
     </nav>
   );
