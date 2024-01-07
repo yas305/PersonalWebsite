@@ -5,7 +5,6 @@ import Terminal from './Terminal';
 import AboutMe from './AboutMe';
 import Physics from './Physics';
 import WorkExperience from './WorkExperience';
-import ContactForm from './ContactForm';
 
 
 function App() {
