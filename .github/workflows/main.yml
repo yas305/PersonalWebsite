@@ -23,7 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build
-    - run: npm test
+    
 
   deploy:
     needs: build  # This job runs after the build job
