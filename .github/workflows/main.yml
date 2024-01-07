@@ -1,0 +1,41 @@
+name: Heroku Deployments
+
+on:
+  push:
+    branches: [ main, dev ]  # Runs on push to main and dev branches
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - run: npm test
+
+  deploy:
+    needs: build  # This job runs after the build job
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'  # Only run deployment for main branch
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - run: npm run build
+    # Add steps to deploy to Heroku
+    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action to deploy to Heroku
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "siteofyas" # Replace with your Heroku app name
+        heroku_email: "yahiesharif01@gmail.com" # Replace with your Heroku account email
