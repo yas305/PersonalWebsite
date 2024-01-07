@@ -1,0 +1,21 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: var(--primary-color);
+  color: white;
+  z-index: 1000; /* This ensures the navbar is always on top of other elements */
+}
+
+.Navbar a {
+  margin: 0 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.Navbar a:hover {
+  color: #ddd;
+}

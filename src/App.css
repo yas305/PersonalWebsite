@@ -1,38 +1,44 @@
+:root {
+  --primary-color: #0D47A1; /* A deep blue color */
+  --secondary-color: #1976D2; /* A slightly lighter blue */
+  --background-color: #283593; /* A dark blue for the background */
+  --accent-color: #64B5F6; /* A light blue for accents and highlights */
+  --text-color: #E3F2FD; /* A very light blue for text */
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #000033; /* dark blue */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  padding-bottom: 100px;
+}
+.App-header {
+  font-size: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.terminal {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 400px;
+  width: 100%;
+  text-align: left;
+
 }
+
+
+
+
+.my-svg.absolute {
+  position: absolute;
+  top: 0;
+  left: 50%;
+} 
