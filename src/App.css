@@ -9,12 +9,13 @@
 .App {
   text-align: center;
   background-color: #000033; /* dark blue */
-  min-height: 100vh;
+  min-height: 100vh; /* 100% of the viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Content starts from the top */
   color: white;
+ 
 }
 
 body {
