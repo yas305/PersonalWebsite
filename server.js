@@ -7,9 +7,6 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 
-
-
-
 app.get('/tracking.gif', (req, res) => {
     // Log the request to console or a file, or store in a database
     console.log('Tracking pixel requested:', req.headers);
