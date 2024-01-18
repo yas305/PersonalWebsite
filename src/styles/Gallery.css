@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+  }
+  
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+  
+  
+  .image-container {
+    position: relative;
+    display: inline-block; /* or your preferred display type */
+  }
+  
+  .image {
+    width: 40vmin; /* existing styles */
+    height: 56vmin; /* existing styles */
+    object-fit: cover;
+    transition: filter 0.3s ease; /* added for smooth blur effect */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+  }
+  
+  .image-container:hover .image {
+    filter: blur(5px); /* blur effect on hover */
+  }
+  
+  .image-container:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  .overlay p {
+    font-size: 25px; /* Adjust the size as needed */
+    color: white; /* Optional: change text color */
+    text-align: center; /* Optional: align text */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Optional: add padding for better spacing */
+    /* Add any other text styles you need */
+    font-weight: bold;
+  } 
+
+  
+  
+
+  

@@ -1,32 +1,15 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs'); // Make sure you require 'fs'
 const app = express();
 
 // Serve static files from the React app build directory
 app.use(express.static(path.join(__dirname, 'build')));
 
 
-app.get('/tracking.gif', (req, res) => {
-    // Log the request to console or a file, or store in a database
-    console.log('Tracking pixel requested:', req.headers);
-
-    // Path to your tracking image
-    const pixelPath = path.join(__dirname, 'public', 'logo192.png');
-
-    // Read the image file from the filesystem
-    const pixel = fs.readFileSync(pixelPath);
-
-    // Set the content type to the correct image MIME type
-    res.set('Content-Type', 'image/png'); // Changed to 'image/png' for a PNG file
-
-    res.send(pixel);
+app.get('/cv', (req, res) => {
+    const pdfPath = path.join(__dirname, 'public', 'YahieAliCV.pdf'); 
+    res.sendFile(pdfPath);
 });
-
-
-
-
-
 
 
 

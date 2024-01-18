@@ -1,0 +1,84 @@
+.bottom-nav {
+    position: fixed;
+    bottom: -100%; /* Initially hidden */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    transition: bottom 0.5s ease;
+    z-index: 10; /* Adjust as needed */
+    height: 20vh;
+  }
+  
+  .bottom-nav.open {
+    bottom: 0; /* Slide up */
+  }
+  
+  .nav-links-container {
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    flex-wrap: wrap; /* Wrap if necessary */
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Align vertically */
+    align-items: center; /* Center items */
+    /* Keep the rest of the styles unchanged */
+  }
+  
+  .nav-card {
+    margin: 10px;
+    text-align: center;
+    width: 100px; /* Width of card */
+  }
+  
+  .nav-card-title {
+    color: white;
+    font-size: 0.8rem; /* Adjust font size */
+  }
+  
+  .nav-card-image {
+    width: 100%;
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+  }
+  
+  /* Add styles for #nav-toggle and other elements as needed */
+  .hidden {
+    display: none;
+  }
+  
+  .bottom-nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 9; /* Behind the nav */
+  }
+
+  .bottom-nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 9;
+     /* Behind the nav */
+  }
+
+  #nav-toggle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 35px solid rgb(182, 142, 113); /* Adjust the color as needed */
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
