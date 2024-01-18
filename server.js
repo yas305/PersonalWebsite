@@ -6,9 +6,17 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/cv', (req, res) => {
-    const pdfPath = path.join(__dirname, 'build', 'YahieAliCV.pdf'); 
-    res.sendFile(pdfPath);
+    try {
+        const pdfPath = path.join(__dirname, 'public', 'YahieAliCV.pdf');
+        console.log('PDF Path:', pdfPath);
+        res.sendFile(pdfPath);
+    } catch (error) {
+        console.error('Error serving CV:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
+
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
