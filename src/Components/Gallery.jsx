@@ -89,7 +89,7 @@ const images = image_urls.map((url, index) => ({
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
       {images.map((image, index) => (
         <div className="image-container" key={index}>
-          <img className="image" src={image.url} draggable="false" />
+          <img className="image" src={image.url} draggable="false" alt='' />
           <div className="overlay">
             {/* Display the image description */}
             <p>{image.description}</p>
