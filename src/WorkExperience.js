@@ -53,8 +53,6 @@ const experiences = [
 const ExperienceCard = ({ experience }) => {
 
 
- // Empty dependency array means this effect runs once on mount
-
   return (
     <div className="experience-card">
       <h3>{experience.title} @ {experience.company}</h3>
