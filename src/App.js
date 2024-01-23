@@ -4,7 +4,7 @@ import Heading from './Components/Heading';
 import Gallery from './Components/Gallery';
 import { useEffect } from 'react';
 import BottomNav from './Components/BottomNav';
-
+import { BrowserRouter as Router} from 'react-router-dom';
 function App() {
 
   useEffect(() => {
@@ -21,21 +21,22 @@ function App() {
     }
     
 
-
   });
 
   
   return (
+    <Router>
     <div className="App">
-  <div id="blob"></div>
-  
-  <Heading/>
-  <Gallery/>
-<BottomNav/>
+      <div id="blob"></div>
+      
+   <Heading/>
+      <Gallery />
+
+      <BottomNav/>
 
     </div>
-    
-    
+  </Router>
+
   );
 }
 

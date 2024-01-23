@@ -3,7 +3,7 @@ body {
     width: 100vw;
     background-color: black;
     margin: 0rem;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   #image-track {
@@ -12,7 +12,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(0%, -50%); 
+    transform: translate(-50%, -50%); 
     user-select: none; /* -- Prevent image highlighting -- */
   }
   
@@ -34,6 +34,7 @@ body {
     height: 56vmin; /* existing styles */
     object-fit: cover;
     transition: filter 0.3s ease; /* added for smooth blur effect */
+    border-radius: 50px;
   }
   
   .overlay {
@@ -50,6 +51,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
+    border-radius: 50px;
   }
   
   .image-container:hover .image {

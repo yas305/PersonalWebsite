@@ -65,7 +65,7 @@ const images = image_urls.map((url, index) => ({
       }
     }
     
-    /* -- Had to add extra lines for touch events -- */
+    
     
     window.onmousedown = e => handleOnDown(e);
     

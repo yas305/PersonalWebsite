@@ -47,7 +47,7 @@ function Heading() {
   
 
   return (
-    <div className="line">
+    <div >
         <a
           id="channel-link"
           href="https://www.youtube.com/channel/UC5Ei028wCuFj0uW3Dr7G2tg"

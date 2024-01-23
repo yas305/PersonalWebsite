@@ -6,23 +6,8 @@
     width: 90%; /* Make the card take up 90% of the width of its parent */
     max-width: 800px; /* Limit the maximum width of the card */
     margin: auto; /* Center the card */
-    
-    .card {
-  display: flex;
-  background-color: #f0f0f0; /* Change to the color you want */
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 90%; /* Make the card take up 90% of the width of its parent */
-  max-width: 800px; 
-  margin: auto; 
+    z-index: 100;
 
-}
-
-
-@media screen and (max-width: 600px) {
-  .card {
-    width: 100%;
-  }
 }
 
 .portrait {
@@ -35,10 +20,10 @@
 .text {
     padding: 20px;
     color: #333; 
-   
-  }
 
   }
+
+  
   
 .content{
 text-align: left;
@@ -60,11 +45,7 @@ font-size: 0.8em;
 
 
 
-  @media screen and (max-width: 600px) {
-    .card {
-      width: 100%; 
-    }
-  }
+
   
   .portrait {
     width: 50%;
